@@ -5,6 +5,10 @@ VisualStudioVersion = 17.6.33717.318
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IRentNG.API", "IRentNg.WebApi\IRentNG.API.csproj", "{68651123-DF1C-40FA-9482-7DA68DD2EDFB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IRentNG.Contracts", "IRentNG.Contracts\IRentNG.Contracts.csproj", "{833B6AA1-D36F-4CF9-8C72-5DFC556FFA20}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IRentNG.LoggerService", "IRentNG.LoggerService\IRentNG.LoggerService.csproj", "{565B92E1-3541-4254-B662-AB9491CD9697}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{68651123-DF1C-40FA-9482-7DA68DD2EDFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{68651123-DF1C-40FA-9482-7DA68DD2EDFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{68651123-DF1C-40FA-9482-7DA68DD2EDFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{833B6AA1-D36F-4CF9-8C72-5DFC556FFA20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{833B6AA1-D36F-4CF9-8C72-5DFC556FFA20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{833B6AA1-D36F-4CF9-8C72-5DFC556FFA20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{833B6AA1-D36F-4CF9-8C72-5DFC556FFA20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{565B92E1-3541-4254-B662-AB9491CD9697}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{565B92E1-3541-4254-B662-AB9491CD9697}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{565B92E1-3541-4254-B662-AB9491CD9697}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{565B92E1-3541-4254-B662-AB9491CD9697}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
