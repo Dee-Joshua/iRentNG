@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33717.318
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IRentNG.API", "IRentNg.WebApi\IRentNG.API.csproj", "{68651123-DF1C-40FA-9482-7DA68DD2EDFB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{68651123-DF1C-40FA-9482-7DA68DD2EDFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68651123-DF1C-40FA-9482-7DA68DD2EDFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68651123-DF1C-40FA-9482-7DA68DD2EDFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68651123-DF1C-40FA-9482-7DA68DD2EDFB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CEAEF07A-1791-41BC-BA76-8776D5EA90B8}
+	EndGlobalSection
+EndGlobal
