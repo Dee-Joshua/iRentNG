@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\IRentNG.Contracts\IRentNG.Contracts.csproj" />
+    <ProjectReference Include="..\IRentNG.Entities\IRentNG.Entities.csproj" />
+    <ProjectReference Include="..\IRentNG.Service.Contracts\IRentNG.Service.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>
