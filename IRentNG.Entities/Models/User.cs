@@ -7,6 +7,7 @@ namespace IRentNG.Entities.Models
 
         public string FullName { get; set; }
         public string ProfilePicture { get; set; }
+        public string PermanentAddress { get; set; }
 
         public ICollection<Property> Properties { get; set; }
     }

@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
@@ -20,6 +20,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\IRentNG.LoggerService\IRentNG.LoggerService.csproj" />
+    <ProjectReference Include="..\IRentNG.Presentation\IRentNG.Presentation.csproj" />
     <ProjectReference Include="..\IRentNG.Repository\IRentNG.Repository.csproj" />
     <ProjectReference Include="..\IRentNG.Service\IRentNG.Service.csproj" />
   </ItemGroup>

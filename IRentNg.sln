@@ -17,6 +17,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IRentNG.Service.Contracts",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IRentNG.Service", "IRentNG.Service\IRentNG.Service.csproj", "{CCBEED39-3DCD-4A9C-BE21-3A5B610695ED}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IRentNG.Shared", "IRentNG.Shared\IRentNG.Shared.csproj", "{E6494D67-B40D-46C6-AE5C-BC19EA150951}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IRentNG.Presentation", "IRentNG.Presentation\IRentNG.Presentation.csproj", "{7946F3D4-3FD1-4A4A-9DFA-87E412B93CEB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +55,14 @@ Global
 		{CCBEED39-3DCD-4A9C-BE21-3A5B610695ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CCBEED39-3DCD-4A9C-BE21-3A5B610695ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CCBEED39-3DCD-4A9C-BE21-3A5B610695ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6494D67-B40D-46C6-AE5C-BC19EA150951}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6494D67-B40D-46C6-AE5C-BC19EA150951}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6494D67-B40D-46C6-AE5C-BC19EA150951}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6494D67-B40D-46C6-AE5C-BC19EA150951}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7946F3D4-3FD1-4A4A-9DFA-87E412B93CEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7946F3D4-3FD1-4A4A-9DFA-87E412B93CEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7946F3D4-3FD1-4A4A-9DFA-87E412B93CEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7946F3D4-3FD1-4A4A-9DFA-87E412B93CEB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

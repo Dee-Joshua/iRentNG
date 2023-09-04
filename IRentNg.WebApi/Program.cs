@@ -12,6 +12,7 @@ builder.Services.ConfigureLoggerService();
 builder.Services.ConfigureUnitOfWork();
 builder.Services.ConfigureServiceManager();
 builder.Services.AddAutoMapper(typeof(Program));
+builder.Services.AddControllers().AddApplicationPart(typeof(IRentNG.Presentation.AssemblyReference).Assembly);
 builder.Services.AddAuthentication();
 builder.Services.ConfigureIdentity();
 
