@@ -1,4 +1,5 @@
 using IRentNG.API.Extensions;
+using IRentNG.Contracts;
 using NLog;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -31,6 +32,12 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+var logger = app.Services.GetRequiredService<ILoggerManager>();
+app.ConfigureExceptionHandler(logger);
+
+if (app.Environment.IsProduction())
+    app.UseHsts();
 
 app.UseHttpsRedirection();
 
