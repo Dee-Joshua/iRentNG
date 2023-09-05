@@ -3,23 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33717.318
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IRentNG.API", "IRentNg.WebApi\IRentNG.API.csproj", "{68651123-DF1C-40FA-9482-7DA68DD2EDFB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IRentNG.API", "IRentNg.WebApi\IRentNG.API.csproj", "{68651123-DF1C-40FA-9482-7DA68DD2EDFB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IRentNG.Contracts", "IRentNG.Contracts\IRentNG.Contracts.csproj", "{833B6AA1-D36F-4CF9-8C72-5DFC556FFA20}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IRentNG.Contracts", "IRentNG.Contracts\IRentNG.Contracts.csproj", "{833B6AA1-D36F-4CF9-8C72-5DFC556FFA20}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IRentNG.LoggerService", "IRentNG.LoggerService\IRentNG.LoggerService.csproj", "{565B92E1-3541-4254-B662-AB9491CD9697}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IRentNG.LoggerService", "IRentNG.LoggerService\IRentNG.LoggerService.csproj", "{565B92E1-3541-4254-B662-AB9491CD9697}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IRentNG.Entities", "IRentNG.Entities\IRentNG.Entities.csproj", "{F45E8CC7-BF48-43C4-BB13-E6A69A100261}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IRentNG.Entities", "IRentNG.Entities\IRentNG.Entities.csproj", "{F45E8CC7-BF48-43C4-BB13-E6A69A100261}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IRentNG.Repository", "IRentNG.Repository\IRentNG.Repository.csproj", "{577F6787-EF03-4EE4-AB7D-B7A9DAACC8FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IRentNG.Repository", "IRentNG.Repository\IRentNG.Repository.csproj", "{577F6787-EF03-4EE4-AB7D-B7A9DAACC8FC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IRentNG.Service.Contracts", "IRentNG.Service.Contracts\IRentNG.Service.Contracts.csproj", "{315C9EBE-39B1-4CB0-BC46-49F66F47CEF8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IRentNG.Service.Contracts", "IRentNG.Service.Contracts\IRentNG.Service.Contracts.csproj", "{315C9EBE-39B1-4CB0-BC46-49F66F47CEF8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IRentNG.Service", "IRentNG.Service\IRentNG.Service.csproj", "{CCBEED39-3DCD-4A9C-BE21-3A5B610695ED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IRentNG.Service", "IRentNG.Service\IRentNG.Service.csproj", "{CCBEED39-3DCD-4A9C-BE21-3A5B610695ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IRentNG.Shared", "IRentNG.Shared\IRentNG.Shared.csproj", "{E6494D67-B40D-46C6-AE5C-BC19EA150951}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IRentNG.Shared", "IRentNG.Shared\IRentNG.Shared.csproj", "{E6494D67-B40D-46C6-AE5C-BC19EA150951}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IRentNG.Presentation", "IRentNG.Presentation\IRentNG.Presentation.csproj", "{7946F3D4-3FD1-4A4A-9DFA-87E412B93CEB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IRentNG.Presentation", "IRentNG.Presentation\IRentNG.Presentation.csproj", "{7946F3D4-3FD1-4A4A-9DFA-87E412B93CEB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

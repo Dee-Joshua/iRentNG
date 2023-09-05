@@ -1,5 +1,6 @@
 using IRentNG.API.Extensions;
 using IRentNG.Contracts;
+using IRentNG.Presentation.ActionFilters;
 using Microsoft.AspNetCore.Mvc;
 using NLog;
 
@@ -14,7 +15,8 @@ builder.Services.ConfigureLoggerService();
 builder.Services.ConfigureUnitOfWork();
 builder.Services.ConfigureServiceManager();
 builder.Services.AddAutoMapper(typeof(Program));
-builder.Services.AddControllers().AddApplicationPart(typeof(IRentNG.Presentation.AssemblyReference).Assembly);
+builder.Services.AddScoped<ValidationFilterAttribute>();
+
 builder.Services.AddAuthentication();
 builder.Services.ConfigureIdentity();
 builder.Services.Configure<ApiBehaviorOptions>(options =>
@@ -22,7 +24,7 @@ builder.Services.Configure<ApiBehaviorOptions>(options =>
     options.SuppressModelStateInvalidFilter = true;
 });
 
-builder.Services.AddControllers();
+builder.Services.AddControllers().AddApplicationPart(typeof(IRentNG.Presentation.AssemblyReference).Assembly);
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

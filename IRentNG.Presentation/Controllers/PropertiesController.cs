@@ -1,4 +1,5 @@
-﻿using IRentNG.Service.Contracts;
+﻿using IRentNG.Presentation.ActionFilters;
+using IRentNG.Service.Contracts;
 using IRentNG.Shared.DataTransferObjects;
 using Microsoft.AspNetCore.Mvc;
 
@@ -30,7 +31,7 @@ namespace IRentNG.Presentation.Controllers
 
 
         [HttpPost]
-        //[ServiceFilter(typeof(ValidationFilterAttribute))]
+        [ServiceFilter(typeof(ValidationFilterAttribute))]
         public async Task<IActionResult> CreatePropertyForUser(Guid userId, [FromBody] PropertyForCreationDto property)
         {
             var createdProperty = await _service.PropertyService.CreatePropertyForUserAsync(userId, property, trackChanges: false);
@@ -48,7 +49,7 @@ namespace IRentNG.Presentation.Controllers
 
 
         [HttpPut("{id:guid}")]
-        //[ServiceFilter(typeof(ValidationFilterAttribute))]
+        [ServiceFilter(typeof(ValidationFilterAttribute))]
         public async Task<IActionResult> UpdatePropertyForUser(Guid userId, Guid id, [FromBody] PropertyForUpdateDto property)
         {
             await _service.PropertyService.UpdatePropertyForUserAsync(userId, id, property, userTrackChanges: false, propTrackChanges: true);

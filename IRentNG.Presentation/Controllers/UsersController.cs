@@ -1,4 +1,6 @@
-﻿using IRentNG.Service.Contracts;
+﻿using IRentNG.Presentation.ActionFilters;
+using IRentNG.Service.Contracts;
+using IRentNG.Shared.DataTransferObjects;
 using Microsoft.AspNetCore.Mvc;
 
 namespace IRentNG.Presentation.Controllers
@@ -30,6 +32,15 @@ namespace IRentNG.Presentation.Controllers
         public async Task<IActionResult> DeleteUser(Guid id)
         {
             await _service.UserService.DeleteUserAsync(id, trackChanges: false);
+            return NoContent();
+        }
+
+
+        [HttpPut("{id:guid}")]
+        [ServiceFilter(typeof(ValidationFilterAttribute))]
+        public async Task<IActionResult> UpdateUser(Guid id, [FromBody] UserForUpdateDto user)
+        {
+            await _service.UserService.UpdateUserAsync(id, user, trackChanges: true);
             return NoContent();
         }
     }
