@@ -10,6 +10,15 @@ namespace IRentNG.Repository
         {
         }
 
+        public void CreatePropertyForUser(string userId, Property property)
+        {
+            property.UserId = userId;
+            Create(property);
+        }
+
+        public void DeleteProperty(Property property) => Delete(property);
+
+
         public async Task<IEnumerable<Property>> GetPropertiesAsync(string userId, bool trackChanges) => 
             await FindByCondition(p => p.UserId.Equals(userId), trackChanges)
             .OrderBy(p => p.Title)

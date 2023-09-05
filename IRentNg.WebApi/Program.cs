@@ -1,5 +1,6 @@
 using IRentNG.API.Extensions;
 using IRentNG.Contracts;
+using Microsoft.AspNetCore.Mvc;
 using NLog;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -16,6 +17,10 @@ builder.Services.AddAutoMapper(typeof(Program));
 builder.Services.AddControllers().AddApplicationPart(typeof(IRentNG.Presentation.AssemblyReference).Assembly);
 builder.Services.AddAuthentication();
 builder.Services.ConfigureIdentity();
+builder.Services.Configure<ApiBehaviorOptions>(options =>
+{
+    options.SuppressModelStateInvalidFilter = true;
+});
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

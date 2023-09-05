@@ -6,5 +6,7 @@ namespace IRentNG.Service.Contracts
     {
         Task<IEnumerable<UserDto>> GetAllUsersAsync(bool trackChanges);
         Task<UserDto> GetUserAsync(Guid id, bool trackChanges);
+        Task DeleteUserAsync(Guid userId, bool trackChanges);
+        Task UpdateUserAsync(Guid userId, UserForUpdateDto userForUpdate, bool trackChanges);
     }
 }

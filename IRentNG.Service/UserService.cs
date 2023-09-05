@@ -20,6 +20,14 @@ namespace IRentNG.Service
             _logger = logger;
         }
 
+        public async Task DeleteUserAsync(Guid userId, bool trackChanges)
+        {
+            var user = await GetUserAndCheckIfItExists(userId, trackChanges);
+
+            _repository.User.DeleteUser(user);
+            await _repository.SaveAsync();
+        }
+
         public async Task<IEnumerable<UserDto>> GetAllUsersAsync(bool trackChanges)
         {
             var users = await _repository.User.GetAllUsersAsync(trackChanges);
@@ -33,6 +41,14 @@ namespace IRentNG.Service
 
             var userDto = _mapper.Map<UserDto>(user);
             return userDto;
+        }
+
+        public async Task UpdateUserAsync(Guid userId, UserForUpdateDto userForUpdate, bool trackChanges)
+        {
+            var user = await GetUserAndCheckIfItExists(userId, trackChanges);
+
+            _mapper.Map(userForUpdate, user);
+            await _repository.SaveAsync();
         }
 
         private async Task<User> GetUserAndCheckIfItExists(Guid id, bool trackChanges)

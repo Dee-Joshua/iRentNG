@@ -24,5 +24,13 @@ namespace IRentNG.Presentation.Controllers
             var user = await _service.UserService.GetUserAsync(id, trackChanges: false);
             return Ok(user);
         }
+
+
+        [HttpDelete("{id:guid}")]
+        public async Task<IActionResult> DeleteUser(Guid id)
+        {
+            await _service.UserService.DeleteUserAsync(id, trackChanges: false);
+            return NoContent();
+        }
     }
 }

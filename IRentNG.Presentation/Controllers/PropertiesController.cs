@@ -1,4 +1,5 @@
 ﻿using IRentNG.Service.Contracts;
+using IRentNG.Shared.DataTransferObjects;
 using Microsoft.AspNetCore.Mvc;
 
 namespace IRentNG.Presentation.Controllers
@@ -25,6 +26,34 @@ namespace IRentNG.Presentation.Controllers
         {
             var property = await _service.PropertyService.GetPropertyAsync(userId, id, trackChanges: false);
             return Ok(property);
+        }
+
+
+        [HttpPost]
+        //[ServiceFilter(typeof(ValidationFilterAttribute))]
+        public async Task<IActionResult> CreatePropertyForUser(Guid userId, [FromBody] PropertyForCreationDto property)
+        {
+            var createdProperty = await _service.PropertyService.CreatePropertyForUserAsync(userId, property, trackChanges: false);
+
+            return CreatedAtRoute("GetPropertyForUser", new {userId, id = createdProperty.Id}, createdProperty);
+        }
+
+
+        [HttpDelete("{id:guid}")]
+        public async Task<IActionResult> DeletePropertyForUser(Guid userId, Guid id)
+        {
+            await _service.PropertyService.DeletePropertyForUserAsync(userId, id, trackChanges: false);
+            return NoContent();
+        }
+
+
+        [HttpPut("{id:guid}")]
+        //[ServiceFilter(typeof(ValidationFilterAttribute))]
+        public async Task<IActionResult> UpdatePropertyForUser(Guid userId, Guid id, [FromBody] PropertyForUpdateDto property)
+        {
+            await _service.PropertyService.UpdatePropertyForUserAsync(userId, id, property, userTrackChanges: false, propTrackChanges: true);
+
+            return NoContent();
         }
     }
 }

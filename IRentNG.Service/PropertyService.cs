@@ -54,5 +54,38 @@ namespace IRentNG.Service
             if (user is null)
                 throw new UserNotFoundException(userId);
         }
+
+        public async Task<PropertyDto> CreatePropertyForUserAsync(Guid userId, PropertyForCreationDto propertyForCreation, bool trackChanges)
+        {
+            await CheckIfUserExists(userId, trackChanges);
+
+            var propertyEntity = _mapper.Map<Property>(propertyForCreation);
+
+            _repository.Property.CreatePropertyForUser(userId.ToString(), propertyEntity);
+            await _repository.SaveAsync();
+
+            var propertyToReturn = _mapper.Map<PropertyDto>(propertyEntity);
+            return propertyToReturn;
+        }
+
+        public async Task DeletePropertyForUserAsync(Guid userId, Guid id, bool trackChanges)
+        {
+            await CheckIfUserExists(userId, trackChanges);
+
+            var propertyForUser = await GetPropertyForUserAndCheckIfItExists(userId, id, trackChanges);
+
+            _repository.Property.DeleteProperty(propertyForUser);
+            await _repository.SaveAsync();
+        }
+
+        public async Task UpdatePropertyForUserAsync(Guid userId, Guid id, PropertyForUpdateDto propertyForUpdate, bool userTrackChanges, bool propTrackChanges)
+        {
+            await CheckIfUserExists(userId, userTrackChanges);
+
+            var propertyEntity = await GetPropertyForUserAndCheckIfItExists(userId, id, propTrackChanges);
+
+            _mapper.Map(propertyForUpdate, propertyEntity);
+            await _repository.SaveAsync();
+        }
     }
 }

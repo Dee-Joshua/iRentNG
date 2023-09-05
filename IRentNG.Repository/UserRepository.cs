@@ -10,6 +10,8 @@ namespace IRentNG.Repository
         {
         }
 
+        public void DeleteUser(User user) => Delete(user);
+
         public async Task<IEnumerable<User>> GetAllUsersAsync(bool trackChanges) => 
             await FindAll(trackChanges)
             .OrderBy(u => u.FullName)
