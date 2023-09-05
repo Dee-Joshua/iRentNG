@@ -1,5 +1,6 @@
 ﻿using IRentNG.Contracts;
 using IRentNG.Entities.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace IRentNG.Repository
 {
@@ -8,5 +9,14 @@ namespace IRentNG.Repository
         public PropertyRepository(RepositoryContext repositoryContext) : base(repositoryContext)
         {
         }
+
+        public async Task<IEnumerable<Property>> GetPropertiesAsync(string userId, bool trackChanges) => 
+            await FindByCondition(p => p.UserId.Equals(userId), trackChanges)
+            .OrderBy(p => p.Title)
+            .ToListAsync();
+
+        public async Task<Property> GetPropertyAsync(string userId, Guid id, bool trackChanges) =>
+            await FindByCondition(p => p.UserId.Equals(userId) && p.Id.Equals(id), trackChanges)
+            .SingleOrDefaultAsync();
     }
 }

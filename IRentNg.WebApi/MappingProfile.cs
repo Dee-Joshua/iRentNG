@@ -9,7 +9,7 @@ namespace IRentNG.API
         protected MappingProfile()
         {
             CreateMap<User, UserDto>();
-
+            CreateMap<Property, PropertyDto>();
         }
     }
 }

@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
 using IRentNG.Contracts;
+using IRentNG.Entities.Exceptions;
+using IRentNG.Entities.Models;
 using IRentNG.Service.Contracts;
 using IRentNG.Shared.DataTransferObjects;
 
@@ -27,10 +29,18 @@ namespace IRentNG.Service
 
         public async Task<UserDto> GetUserAsync(Guid id, bool trackChanges)
         {
-            var user = await _repository.User.GetUserAsync(id.ToString(), trackChanges);
+            User user = await GetUserAndCheckIfItExists(id, trackChanges);
 
             var userDto = _mapper.Map<UserDto>(user);
             return userDto;
+        }
+
+        private async Task<User> GetUserAndCheckIfItExists(Guid id, bool trackChanges)
+        {
+            var userFromDatabase = await _repository.User.GetUserAsync(id.ToString(), trackChanges);
+            if (userFromDatabase is null)
+                throw new UserNotFoundException(id);
+            return userFromDatabase;
         }
     }
 }
