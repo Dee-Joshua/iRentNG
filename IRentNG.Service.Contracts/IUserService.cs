@@ -8,5 +8,6 @@ namespace IRentNG.Service.Contracts
         Task<UserDto> GetUserAsync(Guid id, bool trackChanges);
         Task DeleteUserAsync(Guid userId, bool trackChanges);
         Task UpdateUserAsync(Guid userId, UserForUpdateDto userForUpdate, bool trackChanges);
+        Task UpdateUserRoleToLandlordAsync(Guid id, UserForUpdateDto userForUpdate, string role, bool trackChanges);
     }
 }

@@ -4,7 +4,10 @@ namespace IRentNG.Shared.DataTransferObjects
 {
     public record UserForRegistrationDto
     {
+        [Required(ErrorMessage = "FirstName is required")]
         public string FirstName { get; init; }
+
+        [Required(ErrorMessage = "LastName is required")]
         public string LastName { get; init; }
 
         [Required(ErrorMessage = "Email is required")]

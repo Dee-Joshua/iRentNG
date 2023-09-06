@@ -4,6 +4,7 @@ using IRentNG.Entities.Exceptions;
 using IRentNG.Entities.Models;
 using IRentNG.Service.Contracts;
 using IRentNG.Shared.DataTransferObjects;
+using IRentNG.Shared.RequestFeatures;
 
 namespace IRentNG.Service
 {
@@ -20,15 +21,27 @@ namespace IRentNG.Service
             _logger = logger;
         }
 
-        public async Task<IEnumerable<PropertyDto>> GetPropertiesAsync(Guid userId, bool trackChanges)
+        public async Task<(IEnumerable<PropertyDto> properties, MetaData metaData)> GetPropertiesAsync(Guid userId, PropertyParameters propertyParameters, bool trackChanges)
         {
             await CheckIfUserExists(userId, trackChanges);
 
-            var propertyFromDb = await _repository.Property.GetPropertiesAsync(userId.ToString(), trackChanges);
+            var propertiesWithMetaData = await _repository.Property.GetPropertiesAsync(userId.ToString(), propertyParameters, trackChanges);
+            var propertyDto = _mapper.Map<IEnumerable<PropertyDto>>(propertiesWithMetaData);
 
-            var propertyDto = _mapper.Map<IEnumerable<PropertyDto>>(propertyFromDb);
-            return propertyDto;
+            return (properties: propertyDto, metaData: propertiesWithMetaData.MetaData);
         }
+
+        public async Task<(IEnumerable<PropertyDto> properties, MetaData metaData)> GetAllPropertiesInDatabaseAsync(PropertyParameters propertyParameters, bool trackChanges)
+        {
+            if (!propertyParameters.ValidPriceRange)
+                throw new MaxPriceRangeBadRequestException();
+
+            var propertiesWithMetaData = await _repository.Property.GetAllPropertiesInDatabaseAsync(propertyParameters, trackChanges);
+            var propertyDto = _mapper.Map<IEnumerable<PropertyDto>>(propertiesWithMetaData);
+
+            return (properties: propertyDto, metaData: propertiesWithMetaData.MetaData);
+        }
+
 
         public async Task<PropertyDto> GetPropertyAsync(Guid userId, Guid id, bool trackChanges)
         {

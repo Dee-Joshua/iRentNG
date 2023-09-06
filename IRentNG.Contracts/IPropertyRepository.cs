@@ -1,10 +1,13 @@
 ﻿using IRentNG.Entities.Models;
+using IRentNG.Shared.RequestFeatures;
 
 namespace IRentNG.Contracts
 {
     public interface IPropertyRepository
     {
-        Task<IEnumerable<Property>> GetPropertiesAsync(string userId, bool trackChanges);
+        Task<PagedList<Property>> GetPropertiesAsync(string userId, PropertyParameters propertyParameters, bool trackChanges);
+
+        Task<PagedList<Property>> GetAllPropertiesInDatabaseAsync(PropertyParameters propertyParameters, bool trackChanges);
 
         Task<Property> GetPropertyAsync(string userId, Guid id, bool trackChanges);
 

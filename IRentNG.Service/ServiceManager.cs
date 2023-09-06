@@ -18,7 +18,7 @@ namespace IRentNG.Service
             _propertyService = new Lazy<IPropertyService>(()
                 => new PropertyService(repositoryManager, mapper, logger));
             _userService = new Lazy<IUserService>(()
-                => new UserService(repositoryManager, mapper, logger));
+                => new UserService(repositoryManager, mapper, logger, userManager));
             _authenticationService = new Lazy<IAuthenticationService>(()
                 => new AuthenticationService(logger, mapper, userManager, configuration));
         }

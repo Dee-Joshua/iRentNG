@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\IRentNG.Entities\IRentNG.Entities.csproj" />
+    <ProjectReference Include="..\IRentNG.Shared\IRentNG.Shared.csproj" />
   </ItemGroup>
 
 </Project>
