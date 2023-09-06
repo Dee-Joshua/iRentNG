@@ -1,5 +1,6 @@
 ﻿using IRentNG.Contracts;
 using IRentNG.Entities.Models;
+using IRentNG.Repository.Extensions;
 using IRentNG.Shared.RequestFeatures;
 using Microsoft.EntityFrameworkCore;
 
@@ -32,10 +33,10 @@ namespace IRentNG.Repository
 
         public async Task<PagedList<Property>> GetAllPropertiesInDatabaseAsync(PropertyParameters propertyParameters, bool trackChanges)
         {
-            var properties = await FindByCondition(p => p.Price >= propertyParameters.MinPrice &&  p.Price <= propertyParameters.MaxPrice, trackChanges)
-                .OrderBy(p => p.Title)
-                .Skip((propertyParameters.PageNumber - 1) * propertyParameters.PageSize)
-                .Take(propertyParameters.PageSize)
+            var properties = await FindAll(trackChanges)
+                .FilterProperties(propertyParameters.MinPrice, propertyParameters.MaxPrice)
+                .Search(propertyParameters.SearchTerm)
+                .Sort(propertyParameters.OrderBy)
                 .ToListAsync();
 
             var count = await FindByCondition(p => p.Price >= propertyParameters.MinPrice && p.Price <= propertyParameters.MaxPrice, trackChanges).CountAsync();

@@ -103,6 +103,11 @@ namespace IRentNG.Repository.Configuration
                 {
                     Id = 19,
                     Name = "Fire Extinguisher",
+                },
+                new Amenity
+                {
+                    Id = 20,
+                    Name = "Furnitures",
                 });
         }
     }
