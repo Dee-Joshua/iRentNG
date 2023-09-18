@@ -4,10 +4,6 @@ namespace IRentNG.Shared.DataTransferObjects
 {
     public record UserForUpdateDto
     {
-        [Url(ErrorMessage = "Invalid URL format for ProfilePicture.")]
-        [Required(ErrorMessage = "ProfilePicture is required.")]
-        public string ProfilePicture { get; init; }
-
         [Required(ErrorMessage = "FullName is required.")]
         public string FullName { get; init; }
 

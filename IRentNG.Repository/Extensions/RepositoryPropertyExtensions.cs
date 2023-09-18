@@ -1,7 +1,6 @@
 ﻿using IRentNG.Entities.Models;
 using IRentNG.Repository.Extensions.Utility;
-using System.Reflection;
-using System.Text;
+using System.Linq.Dynamic.Core;
 
 namespace IRentNG.Repository.Extensions
 {

@@ -2,6 +2,7 @@
 using IRentNG.Service.Contracts;
 using IRentNG.Shared.DataTransferObjects;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace IRentNG.Presentation.Controllers
@@ -30,6 +31,14 @@ namespace IRentNG.Presentation.Controllers
             return Ok(user);
         }
 
+        [HttpGet("{email}", Name = "UserByEmail")]
+        [Authorize]
+        public async Task<IActionResult> GetUserByEmail(string email)
+        {
+            var user = await _service.UserService.GetUserByEmailAsync(email, trackChanges: false);
+            return Ok(user);
+        }
+
 
         [HttpDelete("{id:guid}")]
         [Authorize]
@@ -43,7 +52,7 @@ namespace IRentNG.Presentation.Controllers
         [HttpPut("{id:guid}")]
         [ServiceFilter(typeof(ValidationFilterAttribute))]
         [Authorize]
-        public async Task<IActionResult> UpdateUser(Guid id, [FromBody] UserForUpdateDto user)
+        public async Task<IActionResult> UpdateUser(Guid id, [FromForm] UserForUpdateDto user)
         {
             await _service.UserService.UpdateUserAsync(id, user, trackChanges: true);
             return NoContent();
@@ -53,11 +62,20 @@ namespace IRentNG.Presentation.Controllers
         [HttpPut("landlord/{id:guid}")]
         [ServiceFilter(typeof(ValidationFilterAttribute))]
         [Authorize]
-        public async Task<IActionResult> UpdateUserToLandlord(Guid id, [FromBody] UserForUpdateDto user)
+        public async Task<IActionResult> UpdateUserToLandlord(Guid id, [FromForm] UserForUpdateDto user, IFormFile profilePicture)
         {
-            await _service.UserService.UpdateUserRoleToLandlordAsync(id, user, "Landlord", trackChanges: true);
+            await _service.UserService.UpdateUserRoleToLandlordAsync(id, user, profilePicture, "Landlord", trackChanges: true);
             return NoContent();
         }
 
+
+        [HttpPost("{id:guid}/profilepicture")]
+        //[Authorize]
+        public async Task<IActionResult> UploadProfilePicture(Guid id, IFormFile photo)
+        {
+            var uploadedPhoto = await _service.UserService.UploadProfilePictureAsync(id, photo, trackChanges: true);
+
+            return Ok(uploadedPhoto.ProfilePicture);
+        }
     }
 }

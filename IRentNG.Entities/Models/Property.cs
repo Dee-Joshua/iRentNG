@@ -15,20 +15,19 @@ namespace IRentNG.Entities.Models
         public PrivacyType Privacy { get; set; }
         public int Bedrooms { get; set; }
         public int Bathrooms { get; set; }
-        public List<Amenity> Amenities { get; set; } = new();
+        public string? PropertyAmenities { get; set; } //Comma separated strings
 
         [Column(TypeName = "money")]
         public decimal Price { get; set; }
 
         public RentInterval Duration { get; set; }
-        public string CoverPhotoURL { get; set; }
+        public string? CoverPhotoURL { get; set; }
+        public string? PropertyPhotosURLs { get; set; } //Comma separated strings
+
+        public DateTime CreatedDate { get; set; } = DateTime.Now;
 
         [ForeignKey(nameof(User))]
         public string UserId { get; set; }
         public User User { get; set; }
-
-        public ICollection<PropertyPhoto> PropertyPhotos { get; set; }
-
-       
     }
 }

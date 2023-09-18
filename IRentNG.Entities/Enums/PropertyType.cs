@@ -10,6 +10,9 @@
         TerraceDuplex,
         Maisonette,
         PentHouse,
-        Mansion
+        Mansion,
+        Villa,
+        Cottage,
+        Cabin
     }
 }

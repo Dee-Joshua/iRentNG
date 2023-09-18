@@ -13,14 +13,14 @@ namespace IRentNG.Service
         private readonly Lazy<IUserService> _userService;
         private readonly Lazy<IAuthenticationService> _authenticationService;
 
-        public ServiceManager(IUnitOfWork repositoryManager, ILoggerManager logger, IMapper mapper, UserManager<User> userManager, IConfiguration configuration)
+        public ServiceManager(IUnitOfWork repositoryManager, ILoggerManager logger, IMapper mapper, UserManager<User> userManager, IConfiguration configuration, IPhotoService photoService, IEmailService emailService)
         {
             _propertyService = new Lazy<IPropertyService>(()
-                => new PropertyService(repositoryManager, mapper, logger));
-            _userService = new Lazy<IUserService>(()
-                => new UserService(repositoryManager, mapper, logger, userManager));
+                => new PropertyService(repositoryManager, mapper, logger, photoService)); 
+            _userService = new Lazy<IUserService>(() 
+                => new UserService(repositoryManager, mapper, logger, userManager, photoService));
             _authenticationService = new Lazy<IAuthenticationService>(()
-                => new AuthenticationService(logger, mapper, userManager, configuration));
+                => new AuthenticationService(logger, mapper, userManager, configuration, emailService));
         }
 
         public IPropertyService PropertyService => _propertyService.Value;

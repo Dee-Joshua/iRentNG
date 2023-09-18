@@ -24,6 +24,8 @@ namespace IRentNG.API.Extensions
                         {
                             NotFoundException => StatusCodes.Status404NotFound,
                             BadRequestException => StatusCodes.Status400BadRequest,
+                            FileUploadException => StatusCodes.Status422UnprocessableEntity,
+                            UnauthorizedException => StatusCodes.Status401Unauthorized,
                             _ => StatusCodes.Status500InternalServerError
                         };
 

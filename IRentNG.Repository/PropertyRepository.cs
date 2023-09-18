@@ -21,7 +21,7 @@ namespace IRentNG.Repository
         public void DeleteProperty(Property property) => Delete(property);
 
 
-        public async Task<PagedList<Property>> GetPropertiesAsync(string userId, PropertyParameters propertyParameters, bool trackChanges)
+        public async Task<PagedList<Property>> GetPropertiesForUserAsync(string userId, PropertyParameters propertyParameters, bool trackChanges)
         {
             var properties = await FindByCondition(p => p.UserId.Equals(userId), trackChanges)
                 .OrderBy(p => p.Title)
@@ -34,6 +34,7 @@ namespace IRentNG.Repository
         public async Task<PagedList<Property>> GetAllPropertiesInDatabaseAsync(PropertyParameters propertyParameters, bool trackChanges)
         {
             var properties = await FindAll(trackChanges)
+                .Skip((propertyParameters.PageNumber-1)*propertyParameters.PageSize).Take(propertyParameters.PageSize)
                 .FilterProperties(propertyParameters.MinPrice, propertyParameters.MaxPrice)
                 .Search(propertyParameters.SearchTerm)
                 .Sort(propertyParameters.OrderBy)
@@ -44,9 +45,14 @@ namespace IRentNG.Repository
             return new PagedList<Property>(properties, count, propertyParameters.PageNumber, propertyParameters.PageSize);
         }
 
+        public async Task<Property> GetPropertyAsync(Guid id, bool trackChanges) => 
+            await FindByCondition(p => p.Id.Equals(id), trackChanges)
+            .SingleOrDefaultAsync();
 
-        public async Task<Property> GetPropertyAsync(string userId, Guid id, bool trackChanges) =>
+        public async Task<Property> GetPropertyForUserAsync(string userId, Guid id, bool trackChanges) =>
             await FindByCondition(p => p.UserId.Equals(userId) && p.Id.Equals(id), trackChanges)
             .SingleOrDefaultAsync();
+
+        
     }
 }

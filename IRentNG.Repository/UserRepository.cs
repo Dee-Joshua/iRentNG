@@ -20,5 +20,9 @@ namespace IRentNG.Repository
         public async Task<User> GetUserAsync(string userId, bool trackChanges) =>
             await FindByCondition(u => u.Id.Equals(userId), trackChanges)
             .SingleOrDefaultAsync();
+
+        public async Task<User> GetUserByEmailAsync(string email, bool trackChanges) =>
+            await FindByCondition(u => u.Email.Equals(email), trackChanges)
+            .SingleOrDefaultAsync();
     }
 }

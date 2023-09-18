@@ -6,6 +6,7 @@ namespace IRentNG.Contracts
     {
         Task<IEnumerable<User>> GetAllUsersAsync(bool trackChanges);
         Task<User> GetUserAsync(string userId, bool trackChanges);
+        Task<User> GetUserByEmailAsync(string email, bool trackChanges);
         void DeleteUser(User user);
     }
 }

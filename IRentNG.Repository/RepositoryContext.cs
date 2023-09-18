@@ -17,10 +17,12 @@ namespace IRentNG.Repository
 
             builder.ApplyConfiguration(new RoleConfiguration());
             //builder.ApplyConfiguration(new AmenityConfiguration());
+            builder.ApplyConfiguration(new UserConfiguration());
+            builder.ApplyConfiguration(new PropertyConfiguration());
         }
 
         public DbSet<Property> Properties { get; set; }
-        public DbSet<Amenity> Amenities { get; set; }
-        public DbSet<PropertyPhoto> PropertyPhotos { get; set; }
+        //public DbSet<Amenity> Amenities { get; set; }
+        //public DbSet<PropertyPhoto> PropertyPhotos { get; set; }
     }
 }

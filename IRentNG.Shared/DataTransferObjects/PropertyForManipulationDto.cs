@@ -35,8 +35,8 @@ namespace IRentNG.Shared.DataTransferObjects
         [Required(ErrorMessage = "Duration is required.")]
         public RentInterval Duration { get; init; }
 
-        [Required(ErrorMessage = "CoverPhotoURL is required.")]
+        /*[Required(ErrorMessage = "CoverPhotoURL is required.")]
         [Url(ErrorMessage = "Invalid URL format for CoverPhotoURL.")]
-        public string CoverPhotoURL { get; init; }
+        public string CoverPhotoURL { get; init; }*/
     }
 }
