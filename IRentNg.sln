@@ -21,6 +21,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IRentNG.Shared", "IRentNG.S
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IRentNG.Presentation", "IRentNG.Presentation\IRentNG.Presentation.csproj", "{7946F3D4-3FD1-4A4A-9DFA-87E412B93CEB}"
 EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{5BE002AC-17A7-41B2-81FE-F4002136D2F8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{7946F3D4-3FD1-4A4A-9DFA-87E412B93CEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7946F3D4-3FD1-4A4A-9DFA-87E412B93CEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7946F3D4-3FD1-4A4A-9DFA-87E412B93CEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BE002AC-17A7-41B2-81FE-F4002136D2F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BE002AC-17A7-41B2-81FE-F4002136D2F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BE002AC-17A7-41B2-81FE-F4002136D2F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BE002AC-17A7-41B2-81FE-F4002136D2F8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace IRentNG.Repository.Migrations
 {
     [DbContext(typeof(RepositoryContext))]
-    [Migration("20230915151136_DataSeeder")]
-    partial class DataSeeder
+    [Migration("20230919112137_InitialDeploymentMigration")]
+    partial class InitialDeploymentMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -87,12 +87,12 @@ namespace IRentNG.Repository.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("84ebbb16-57bc-4dbf-8f91-391f48113ca2"),
+                            Id = new Guid("7125c7d8-4976-497d-8e66-fe881a1d6f4f"),
                             Address = "1 Victoria Island, Lagos",
                             Bathrooms = 2,
                             Bedrooms = 3,
                             CoverPhotoURL = "https://example.com/property1-cover.jpg",
-                            CreatedDate = new DateTime(2023, 9, 15, 16, 11, 35, 927, DateTimeKind.Local).AddTicks(8554),
+                            CreatedDate = new DateTime(2023, 9, 19, 12, 21, 37, 699, DateTimeKind.Local).AddTicks(3444),
                             Description = "Experience luxury living in this spacious apartment located in the heart of Lagos Island. This stunning three-bedroom apartment features a modern kitchen, beautiful city views, and access to top-notch amenities.",
                             Duration = 1,
                             Price = 2500000.00m,
@@ -105,12 +105,12 @@ namespace IRentNG.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("1057a090-8277-4351-b135-b119ab61d24e"),
+                            Id = new Guid("864d6259-ce6a-44c1-9827-e3ce37611e59"),
                             Address = "12 Garki, Abuja",
                             Bathrooms = 4,
                             Bedrooms = 5,
                             CoverPhotoURL = "https://example.com/property2-cover.jpg",
-                            CreatedDate = new DateTime(2023, 9, 15, 16, 11, 35, 927, DateTimeKind.Local).AddTicks(8570),
+                            CreatedDate = new DateTime(2023, 9, 19, 12, 21, 37, 699, DateTimeKind.Local).AddTicks(3454),
                             Description = "Indulge in luxury at this stunning villa in Abuja. This spacious five-bedroom villa features a private pool, lush gardens, and a fully equipped kitchen. Perfect for special events or a relaxing getaway.",
                             Duration = 1,
                             Price = 5000000.00m,
@@ -123,12 +123,12 @@ namespace IRentNG.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("5560f929-f2cd-44b5-bd84-4d39abca0595"),
+                            Id = new Guid("7419c365-dbd8-45a2-a261-9e64415e0217"),
                             Address = "3 Ocean View Drive, Victoria Island",
                             Bathrooms = 2,
                             Bedrooms = 3,
                             CoverPhotoURL = "https://example.com/property3-cover.jpg",
-                            CreatedDate = new DateTime(2023, 9, 15, 16, 11, 35, 927, DateTimeKind.Local).AddTicks(8582),
+                            CreatedDate = new DateTime(2023, 9, 19, 12, 21, 37, 699, DateTimeKind.Local).AddTicks(3460),
                             Description = "A spacious apartment with 3 bedrooms, 2 bathrooms, and a stunning view of the ocean. Located in the upscale Victoria Island neighborhood, this property offers luxury living, a fully equipped kitchen, and access to a private pool and gym.",
                             Duration = 1,
                             Price = 3500000.00m,
@@ -141,12 +141,12 @@ namespace IRentNG.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("2a8c28f3-d0e3-42fe-b87e-359a1bc13e3c"),
+                            Id = new Guid("316f7467-d768-45b3-8a18-43662f6b67cb"),
                             Address = "4 Lekki Gardens, Lekki",
                             Bathrooms = 3,
                             Bedrooms = 4,
                             CoverPhotoURL = "https://example.com/property4-cover.jpg",
-                            CreatedDate = new DateTime(2023, 9, 15, 16, 11, 35, 927, DateTimeKind.Local).AddTicks(8593),
+                            CreatedDate = new DateTime(2023, 9, 19, 12, 21, 37, 699, DateTimeKind.Local).AddTicks(3480),
                             Description = "A modern terrace duplex with 4 bedrooms, 3 bathrooms, and contemporary design. This property is situated in the trendy Lekki neighborhood and offers spacious rooms, a sleek kitchen, and a rooftop terrace with stunning views.",
                             Duration = 2,
                             Price = 600000.00m,
@@ -159,12 +159,12 @@ namespace IRentNG.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("d40e1a94-203f-4f56-8450-531906fe43d0"),
+                            Id = new Guid("22e3c320-a239-48d9-a9e3-39c2c32f3b31"),
                             Address = "5 Calabar Lane, Calabar",
                             Bathrooms = 6,
                             Bedrooms = 6,
                             CoverPhotoURL = "https://example.com/property5-cover.jpg",
-                            CreatedDate = new DateTime(2023, 9, 15, 16, 11, 35, 927, DateTimeKind.Local).AddTicks(8624),
+                            CreatedDate = new DateTime(2023, 9, 19, 12, 21, 37, 699, DateTimeKind.Local).AddTicks(3486),
                             Description = "A charming guest house with 6 cozy rooms, each with its own bathroom. This guest house is located in the beautiful city of Calabar and offers a garden, free Wi-Fi, and a dedicated workspace. Perfect for travelers.",
                             Duration = 2,
                             Price = 450000.00m,
@@ -177,12 +177,12 @@ namespace IRentNG.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("43dfef41-4c65-4cc3-ba67-aba865cda88f"),
+                            Id = new Guid("67ac20de-9974-41ae-a627-e989e00b3c0e"),
                             Address = "6 Marina Drive, Lagos",
                             Bathrooms = 4,
                             Bedrooms = 5,
                             CoverPhotoURL = "https://example.com/property6-cover.jpg",
-                            CreatedDate = new DateTime(2023, 9, 15, 16, 11, 35, 927, DateTimeKind.Local).AddTicks(8653),
+                            CreatedDate = new DateTime(2023, 9, 19, 12, 21, 37, 699, DateTimeKind.Local).AddTicks(3492),
                             Description = "Experience luxury living in this spacious penthouse with 5 bedrooms, 4 bathrooms, and breathtaking views of Lagos. This penthouse features a gourmet kitchen, private elevator access, and access to a rooftop pool and lounge.",
                             Duration = 2,
                             Price = 1000000.00m,
@@ -195,12 +195,12 @@ namespace IRentNG.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("d586440f-afc9-4f09-9624-70cb4c2e5c9d"),
+                            Id = new Guid("42358c46-ffed-4d47-a1f3-88ee80dc1c79"),
                             Address = "7 Diplomat Avenue, Abuja",
                             Bathrooms = 6,
                             Bedrooms = 7,
                             CoverPhotoURL = "https://example.com/property7-cover.jpg",
-                            CreatedDate = new DateTime(2023, 9, 15, 16, 11, 35, 927, DateTimeKind.Local).AddTicks(8665),
+                            CreatedDate = new DateTime(2023, 9, 19, 12, 21, 37, 699, DateTimeKind.Local).AddTicks(3666),
                             Description = "Step into this majestic mansion with 7 bedrooms, 6 bathrooms, and exquisite architecture. Located in the diplomatic zone of Abuja, this property offers a grand entrance, lush gardens, and a private cinema room.",
                             Duration = 1,
                             Price = 10000000.00m,
@@ -213,12 +213,12 @@ namespace IRentNG.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("02088ebe-9ecd-4008-ad77-ee1d292eeb8f"),
+                            Id = new Guid("380f8cfa-65bc-49d5-a972-9e1bd41267b9"),
                             Address = "8 Riverside Street, Port Harcourt",
                             Bathrooms = 2,
                             Bedrooms = 3,
                             CoverPhotoURL = "https://example.com/property8-cover.jpg",
-                            CreatedDate = new DateTime(2023, 9, 15, 16, 11, 35, 927, DateTimeKind.Local).AddTicks(8677),
+                            CreatedDate = new DateTime(2023, 9, 19, 12, 21, 37, 699, DateTimeKind.Local).AddTicks(3672),
                             Description = "Discover modern living in this beautiful maisonette with 3 bedrooms, 2 bathrooms, and a contemporary design. Located in Port Harcourt's upscale neighborhood, this property offers a stylish kitchen, a private garden, and easy access to local amenities.",
                             Duration = 1,
                             Price = 2800000.00m,
@@ -231,12 +231,12 @@ namespace IRentNG.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("250908e6-99fc-48e9-a335-f43fcbc1fa6e"),
+                            Id = new Guid("9e5cd147-e5e8-4aa9-9f7c-d3fc8ad36212"),
                             Address = "9 Riverside Drive, Port Harcourt",
                             Bathrooms = 5,
                             Bedrooms = 6,
                             CoverPhotoURL = "https://example.com/property9-cover.jpg",
-                            CreatedDate = new DateTime(2023, 9, 15, 16, 11, 35, 927, DateTimeKind.Local).AddTicks(8688),
+                            CreatedDate = new DateTime(2023, 9, 19, 12, 21, 37, 699, DateTimeKind.Local).AddTicks(3679),
                             Description = "Experience riverside living in this grand mansion with 6 bedrooms, 5 bathrooms, and panoramic views of the river. This mansion boasts a private dock, a spacious dining hall, and beautifully landscaped gardens.",
                             Duration = 1,
                             Price = 7500000.00m,
@@ -249,12 +249,12 @@ namespace IRentNG.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("5fd0c9ec-9c94-43e6-80a4-f3007105e654"),
+                            Id = new Guid("c89148ef-f14d-4411-a977-0ab4aa5628aa"),
                             Address = "10 Lekki Gardens, Lekki",
                             Bathrooms = 2,
                             Bedrooms = 3,
                             CoverPhotoURL = "https://example.com/property10-cover.jpg",
-                            CreatedDate = new DateTime(2023, 9, 15, 16, 11, 35, 927, DateTimeKind.Local).AddTicks(8711),
+                            CreatedDate = new DateTime(2023, 9, 19, 12, 21, 37, 699, DateTimeKind.Local).AddTicks(3686),
                             Description = "Discover elegance in this terrace duplex with 3 bedrooms, 2 bathrooms, and modern design. Located in Lekki's upscale neighborhood, this property offers a well-appointed kitchen, a cozy living room, and a private courtyard.",
                             Duration = 2,
                             Price = 300000.00m,
@@ -267,12 +267,12 @@ namespace IRentNG.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("62620db4-6119-4dc6-951a-199c3ebb2681"),
+                            Id = new Guid("88665e1f-1a02-4180-8710-05f15859be3b"),
                             Address = "11 Beachfront Lane, Lagos",
                             Bathrooms = 3,
                             Bedrooms = 4,
                             CoverPhotoURL = "https://example.com/property11-cover.jpg",
-                            CreatedDate = new DateTime(2023, 9, 15, 16, 11, 35, 927, DateTimeKind.Local).AddTicks(8720),
+                            CreatedDate = new DateTime(2023, 9, 19, 12, 21, 37, 699, DateTimeKind.Local).AddTicks(3693),
                             Description = "Escape to this seaside villa with 4 bedrooms, 3 bathrooms, and direct access to the beach. This villa offers a fully equipped kitchen, a private swimming pool, and breathtaking sunset views over the ocean.",
                             Duration = 1,
                             Price = 5500000.00m,
@@ -285,12 +285,12 @@ namespace IRentNG.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("042a5756-48fd-4d8a-b99c-fd31cf773ff8"),
+                            Id = new Guid("41ab25b4-cbf3-4a04-a3a9-537007cc4f70"),
                             Address = "12 Green Hills Road, Enugu",
                             Bathrooms = 1,
                             Bedrooms = 2,
                             CoverPhotoURL = "https://example.com/property12-cover.jpg",
-                            CreatedDate = new DateTime(2023, 9, 15, 16, 11, 35, 927, DateTimeKind.Local).AddTicks(8730),
+                            CreatedDate = new DateTime(2023, 9, 19, 12, 21, 37, 699, DateTimeKind.Local).AddTicks(3704),
                             Description = "Experience eco-friendly living in this cozy cottage with 2 bedrooms, 1 bathroom, and sustainable features. Located in the serene hills of Enugu, this cottage offers a vegetable garden, solar & inverter, and a tranquil atmosphere.",
                             Duration = 2,
                             Price = 1800000.00m,
@@ -303,12 +303,12 @@ namespace IRentNG.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("b3afbe97-9551-487e-991f-13040a95e020"),
+                            Id = new Guid("2e8a1948-69cf-4f12-a5db-ef77226701f5"),
                             Address = "13 Heritage Street, Abeokuta",
                             Bathrooms = 4,
                             Bedrooms = 6,
                             CoverPhotoURL = "https://example.com/property13-cover.jpg",
-                            CreatedDate = new DateTime(2023, 9, 15, 16, 11, 35, 927, DateTimeKind.Local).AddTicks(8739),
+                            CreatedDate = new DateTime(2023, 9, 19, 12, 21, 37, 699, DateTimeKind.Local).AddTicks(3722),
                             Description = "Step into history in this historic villa with 6 bedrooms, 4 bathrooms, and antique charm. Located in the heart of Abeokuta, this villa features original architecture, a library, and a spacious courtyard.",
                             Duration = 2,
                             Price = 420000.00m,
@@ -321,12 +321,12 @@ namespace IRentNG.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("50f9a624-c6b0-4379-878a-e33cdb54a59c"),
+                            Id = new Guid("c8848cbe-4e01-4553-9517-eba790bd1636"),
                             Address = "14 Forest Retreat, Ondo",
                             Bathrooms = 1,
                             Bedrooms = 1,
                             CoverPhotoURL = "https://example.com/property14-cover.jpg",
-                            CreatedDate = new DateTime(2023, 9, 15, 16, 11, 35, 927, DateTimeKind.Local).AddTicks(8756),
+                            CreatedDate = new DateTime(2023, 9, 19, 12, 21, 37, 699, DateTimeKind.Local).AddTicks(3728),
                             Description = "Escape to nature in this secluded cabin with 1 bedroom, 1 bathroom, and a tranquil forest setting. Located deep in the Ondo Forest, this cabin offers a fireplace, hiking trails, and a true getaway from the city.",
                             Duration = 2,
                             Price = 120000.00m,
@@ -339,12 +339,12 @@ namespace IRentNG.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("f0837def-f322-47ed-97e3-6a73ce806607"),
+                            Id = new Guid("c921981a-6855-4968-9c04-ed6025f54606"),
                             Address = "15 Oceanview Road, Lagos",
                             Bathrooms = 3,
                             Bedrooms = 4,
                             CoverPhotoURL = "https://example.com/property15-cover.jpg",
-                            CreatedDate = new DateTime(2023, 9, 15, 16, 11, 35, 927, DateTimeKind.Local).AddTicks(8768),
+                            CreatedDate = new DateTime(2023, 9, 19, 12, 21, 37, 699, DateTimeKind.Local).AddTicks(3734),
                             Description = "Indulge in luxury at this beachfront villa with 4 bedrooms, 3 bathrooms, and direct access to the ocean. This villa offers a private chef, infinity pool, and stunning sunset views over the Atlantic.",
                             Duration = 3,
                             Price = 100000.00m,
@@ -357,12 +357,12 @@ namespace IRentNG.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("747b4f4b-f91e-444c-ac8f-e5ccc9ff7ff4"),
+                            Id = new Guid("88638ca9-855d-4c5e-98de-e34202245cde"),
                             Address = "16 Marina View, Lagos",
                             Bathrooms = 2,
                             Bedrooms = 2,
                             CoverPhotoURL = "https://example.com/property16-cover.jpg",
-                            CreatedDate = new DateTime(2023, 9, 15, 16, 11, 35, 927, DateTimeKind.Local).AddTicks(8780),
+                            CreatedDate = new DateTime(2023, 9, 19, 12, 21, 37, 699, DateTimeKind.Local).AddTicks(3740),
                             Description = "Enjoy modern living in this waterfront apartment with 2 bedrooms, 2 bathrooms, and stunning views of Lagos Island. This apartment features a fully equipped kitchen, fitness center, and 24/7 concierge service.",
                             Duration = 3,
                             Price = 45000.00m,
@@ -375,12 +375,12 @@ namespace IRentNG.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("429a1dc2-5f02-4a02-bc0a-57fcc16b433a"),
+                            Id = new Guid("f7c70aa3-2877-4ea4-8f78-2194f3cbc684"),
                             Address = "17 Skyline Towers, Lagos",
                             Bathrooms = 2,
                             Bedrooms = 3,
                             CoverPhotoURL = "https://example.com/property17-cover.jpg",
-                            CreatedDate = new DateTime(2023, 9, 15, 16, 11, 35, 927, DateTimeKind.Local).AddTicks(8789),
+                            CreatedDate = new DateTime(2023, 9, 19, 12, 21, 37, 699, DateTimeKind.Local).AddTicks(3746),
                             Description = "Live in luxury at this Lagos penthouse with 3 bedrooms, 2 bathrooms, and panoramic skyline views. This penthouse offers a rooftop terrace, spa, and private elevator access.",
                             Duration = 1,
                             Price = 5500000.00m,
@@ -393,12 +393,12 @@ namespace IRentNG.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("07b80f7d-0b4e-4067-88c9-cb3e9cf5d2f0"),
+                            Id = new Guid("320cd9e3-90d4-4ed7-b591-7a2e7c114dc6"),
                             Address = "18 Cityscape Lane, Lagos",
                             Bathrooms = 1,
                             Bedrooms = 1,
                             CoverPhotoURL = "https://example.com/property18-cover.jpg",
-                            CreatedDate = new DateTime(2023, 9, 15, 16, 11, 35, 927, DateTimeKind.Local).AddTicks(8800),
+                            CreatedDate = new DateTime(2023, 9, 19, 12, 21, 37, 699, DateTimeKind.Local).AddTicks(3752),
                             Description = "Experience urban living in this contemporary loft with 1 bedroom, 1 bathroom, and breathtaking city views. This loft offers an open-concept design, modern furnishings, and easy access to Lagos nightlife.",
                             Duration = 2,
                             Price = 100000.00m,
@@ -411,12 +411,12 @@ namespace IRentNG.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("11de0802-2b14-4e24-8e9c-4f0cc0f56d06"),
+                            Id = new Guid("e2b4ff8a-7527-492f-8efe-c8e227470867"),
                             Address = "19 Lagoonview Drive, Lagos",
                             Bathrooms = 1,
                             Bedrooms = 1,
                             CoverPhotoURL = "https://example.com/property19-cover.jpg",
-                            CreatedDate = new DateTime(2023, 9, 15, 16, 11, 35, 927, DateTimeKind.Local).AddTicks(8809),
+                            CreatedDate = new DateTime(2023, 9, 19, 12, 21, 37, 699, DateTimeKind.Local).AddTicks(3758),
                             Description = "Escape to this serene waterfront retreat with 1 bedroom, 1 bathroom, and direct access to the lagoon. This retreat features a private boat dock, lush gardens, and a peaceful atmosphere.",
                             Duration = 2,
                             Price = 200000.00m,
@@ -429,12 +429,12 @@ namespace IRentNG.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("22670d16-8f81-4faa-be44-319c391b8dd9"),
+                            Id = new Guid("2f383fe6-44c5-45bf-b777-7998464299b8"),
                             Address = "20 Luxury Avenue, Victoria Island, Lagos",
                             Bathrooms = 2,
                             Bedrooms = 2,
                             CoverPhotoURL = "https://example.com/property20-cover.jpg",
-                            CreatedDate = new DateTime(2023, 9, 15, 16, 11, 35, 927, DateTimeKind.Local).AddTicks(8818),
+                            CreatedDate = new DateTime(2023, 9, 19, 12, 21, 37, 699, DateTimeKind.Local).AddTicks(3766),
                             Description = "Live in style at this modern apartment with 2 bedrooms, 2 bathrooms, and city views in Victoria Island. This apartment offers sleek design, a fitness center, and proximity to top restaurants.",
                             Duration = 2,
                             Price = 450000.00m,
@@ -529,19 +529,19 @@ namespace IRentNG.Repository.Migrations
                         {
                             Id = "579CB2F2-5256-4014-8279-08F527B7F302",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "461c2ea2-3c96-4584-9e4d-f569f38f6d22",
-                            DateJoined = new DateTime(2023, 9, 15, 16, 11, 34, 813, DateTimeKind.Local).AddTicks(1278),
+                            ConcurrencyStamp = "8b2d106c-0e8d-457a-93a8-26ae29585f0f",
+                            DateJoined = new DateTime(2023, 9, 19, 12, 21, 37, 171, DateTimeKind.Local).AddTicks(6333),
                             Email = "admin@example.com",
                             EmailConfirmed = true,
                             FullName = "Josh Admin",
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@EXAMPLE.COM",
                             NormalizedUserName = "ADMIN@EXAMPLE.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAENPas5qEABfP9E6h8WcTA8vj1byEMENlzDyKBN+GVcpqi6jbQM7owZPUERFvUMljDg==",
+                            PasswordHash = "AQAAAAIAAYagAAAAECbadjovXsLz/jBuO97NEaIMrHyTDKMDJTeFOZKOFxq0abXrk08YSV10PR+8eELGPg==",
                             PermanentAddress = "123 Main Street",
                             PhoneNumberConfirmed = false,
                             ProfilePicture = "https://example.com/user1.jpg",
-                            SecurityStamp = "998c7b63-f5f1-4719-9922-33591349e080",
+                            SecurityStamp = "d01639df-9299-4f9f-9403-64a530dd5210",
                             TwoFactorEnabled = false,
                             UserName = "admin@example.com"
                         },
@@ -549,20 +549,20 @@ namespace IRentNG.Repository.Migrations
                         {
                             Id = "6A5C9A15-7F19-46FF-9E1D-62D617126006",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "dc4c5044-46d8-496a-b997-4e4f4de5c7f3",
-                            DateJoined = new DateTime(2023, 9, 15, 16, 11, 35, 29, DateTimeKind.Local).AddTicks(5274),
+                            ConcurrencyStamp = "f40da591-81c3-4fda-abb4-0db6714492c3",
+                            DateJoined = new DateTime(2023, 9, 19, 12, 21, 37, 255, DateTimeKind.Local).AddTicks(6367),
                             Email = "landlord@example.com",
                             EmailConfirmed = true,
                             FullName = "Josh Landlord",
                             LockoutEnabled = false,
                             NormalizedEmail = "LANDLORD@EXAMPLE.COM",
                             NormalizedUserName = "LANDLORD@EXAMPLE.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAENy+rN7CXNcB3kTNvQfjQz6CLTiHyyw2QmrJNvh7kcsU1sfF7cjm+UPZl6q/3dGAQw==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEHDz75zZ0uR4StToj6blMgGUUcMZbNkFctkVReKUktywen3W7O7ICwPnnYu05hU4eg==",
                             PermanentAddress = "456 Elm Street",
                             PhoneNumber = "+2349025621988",
                             PhoneNumberConfirmed = false,
                             ProfilePicture = "https://example.com/user2.jpg",
-                            SecurityStamp = "56aeedf1-5a3c-49bf-9b67-ca41193f63bd",
+                            SecurityStamp = "ac8b3c4a-80f0-4096-a342-dbd2111d352d",
                             TwoFactorEnabled = false,
                             UserName = "landlord@example.com"
                         },
@@ -570,18 +570,18 @@ namespace IRentNG.Repository.Migrations
                         {
                             Id = "9FE6F8FB-CE97-4DAE-AE02-0B3AC6B114FA",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "a3f376ad-33b4-4a11-b218-8e9e7c6c2f3c",
-                            DateJoined = new DateTime(2023, 9, 15, 16, 11, 35, 224, DateTimeKind.Local).AddTicks(9044),
+                            ConcurrencyStamp = "88d791e7-018b-40a0-9bff-c29fb5545058",
+                            DateJoined = new DateTime(2023, 9, 19, 12, 21, 37, 376, DateTimeKind.Local).AddTicks(210),
                             Email = "landlord1@example.com",
                             EmailConfirmed = false,
                             FullName = "John Landlord",
                             LockoutEnabled = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEF1he9+OqmdIfH4Sdf3B5HckO8Wii7rrQ1kf7OCS+63L1vWCuoS2C7Onr7qYMwnXGw==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEHG7it+KKlUSiwQMeIvFq5U5YCpU7t7M5XuOsWuJfude6jvaH/gJYwM7ja/ykm9WNA==",
                             PermanentAddress = "123 Landlord Lane, Lagos",
                             PhoneNumber = "+1234567890",
                             PhoneNumberConfirmed = false,
                             ProfilePicture = "https://example.com/profile1.jpg",
-                            SecurityStamp = "d89e6ca3-0f8d-4986-88b8-0055fa523ff6",
+                            SecurityStamp = "6ffb26fe-1466-4250-94ed-c67783efbd4f",
                             TwoFactorEnabled = false,
                             UserName = "landlord1@example.com"
                         },
@@ -589,18 +589,18 @@ namespace IRentNG.Repository.Migrations
                         {
                             Id = "826E0C43-871D-4498-B343-8F8260E1127C",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "3e311e15-8454-4eb2-8166-fec42c9f6d0c",
-                            DateJoined = new DateTime(2023, 9, 15, 16, 11, 35, 414, DateTimeKind.Local).AddTicks(4446),
+                            ConcurrencyStamp = "745282d5-a2be-462a-83b5-1e615cd0ffb7",
+                            DateJoined = new DateTime(2023, 9, 19, 12, 21, 37, 445, DateTimeKind.Local).AddTicks(5913),
                             Email = "landlord2@example.com",
                             EmailConfirmed = false,
                             FullName = "Jane PropertyOwner",
                             LockoutEnabled = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEMHafzqe6Wrt4puAyCbfthPhSw3IAKRVk6MvovrerbvKvq+skq0q4uNOGofjhdjOEg==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEFrr0LtGZesYFQlAuqdtuTCxfWXALB2Xw9Fp56sQvrHrR3Bhwj3xZBd2RDinecjRgw==",
                             PermanentAddress = "456 Landlord Street, Abuja",
                             PhoneNumber = "+2345678901",
                             PhoneNumberConfirmed = false,
                             ProfilePicture = "https://example.com/profile2.jpg",
-                            SecurityStamp = "d52808e8-8ff3-4694-893f-61a9d07b038a",
+                            SecurityStamp = "b253f740-c7c3-43bf-986c-5c53a8c293df",
                             TwoFactorEnabled = false,
                             UserName = "landlord2@example.com"
                         },
@@ -608,18 +608,18 @@ namespace IRentNG.Repository.Migrations
                         {
                             Id = "91F6AFD4-8D50-40B1-B09E-E799723E952D",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "1662c153-ccff-483f-976c-49e9688f60ad",
-                            DateJoined = new DateTime(2023, 9, 15, 16, 11, 35, 603, DateTimeKind.Local).AddTicks(9509),
+                            ConcurrencyStamp = "e9f5949b-765d-44ac-ac46-231377c2eeb1",
+                            DateJoined = new DateTime(2023, 9, 19, 12, 21, 37, 527, DateTimeKind.Local).AddTicks(5521),
                             Email = "landlord3@example.com",
                             EmailConfirmed = false,
                             FullName = "Chris RealEstate",
                             LockoutEnabled = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEIBb3bbgiee1+ktmocLpmBcG4GepN97XlSvclFwEKQm340qcP5cNuTS96yqwyV/uKw==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEIDd3+Ti2Zb+r/mvjiMxjZ9ixo6s02U1ilJ8QPtR+LTDNX9pUNfCp1CQPfftqC2YdQ==",
                             PermanentAddress = "789 Rental Road, Lagos",
                             PhoneNumber = "+3456789012",
                             PhoneNumberConfirmed = false,
                             ProfilePicture = "https://example.com/profile3.jpg",
-                            SecurityStamp = "e248bd7c-3eed-437a-bb3d-76fe076ba166",
+                            SecurityStamp = "ded1f424-62a8-46a1-a32c-b1a2b013318d",
                             TwoFactorEnabled = false,
                             UserName = "landlord3@example.com"
                         },
@@ -627,18 +627,18 @@ namespace IRentNG.Repository.Migrations
                         {
                             Id = "3F373D01-67C5-4FBC-92BB-3C84117CAE7B",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "4f320083-8adc-4ac3-a896-231016d38569",
-                            DateJoined = new DateTime(2023, 9, 15, 16, 11, 35, 786, DateTimeKind.Local).AddTicks(44),
+                            ConcurrencyStamp = "e359f8e3-0a7f-42be-a082-8f08468a12b9",
+                            DateJoined = new DateTime(2023, 9, 19, 12, 21, 37, 598, DateTimeKind.Local).AddTicks(4422),
                             Email = "landlord4@example.com",
                             EmailConfirmed = false,
                             FullName = "Laura Landlord",
                             LockoutEnabled = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAELGOaq6cV+AJUL3FH+jrPp7I0IxEqZYRmh5RjF5HNarYp1Wj02asocAVAYkWkEvxMg==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEK4MF5abKkkwvk7qu8x5w1YfpsIgdHIPX2ZBBOA5WyBKnFLSshNf4MMehajqUVkpbA==",
                             PermanentAddress = "101 Landlord Avenue, Abuja",
                             PhoneNumber = "+4567890123",
                             PhoneNumberConfirmed = false,
                             ProfilePicture = "https://example.com/profile4.jpg",
-                            SecurityStamp = "1c6df5fa-e0be-4430-9ad3-0f0a68315473",
+                            SecurityStamp = "074f3eb9-632d-4343-94fd-9462b5f0ba46",
                             TwoFactorEnabled = false,
                             UserName = "landlord4@example.com"
                         },
@@ -646,18 +646,18 @@ namespace IRentNG.Repository.Migrations
                         {
                             Id = "0C2E622E-49D1-4A80-AB68-A5AB3A213877",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "160001d6-ba8e-4bb4-9702-0b4aa6df5946",
-                            DateJoined = new DateTime(2023, 9, 15, 16, 11, 35, 927, DateTimeKind.Local).AddTicks(6140),
+                            ConcurrencyStamp = "13f42fa0-2d8d-4862-9d93-d10b6b65c53c",
+                            DateJoined = new DateTime(2023, 9, 19, 12, 21, 37, 699, DateTimeKind.Local).AddTicks(1642),
                             Email = "landlord5@example.com",
                             EmailConfirmed = false,
                             FullName = "David Rental",
                             LockoutEnabled = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEGuHk0eTtYm0MM74vYEQaddwELLXEKB93pKzf84v9bgvyP/Pt9aIh8ttk35+F+TBIw==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEAnxF79rXGmX2ntznvYV7IH/m6SRvkbXczqdyB2XsOWG81N77hOzVXSMjHiA0TTc6w==",
                             PermanentAddress = "234 Property Place, Lagos",
                             PhoneNumber = "+5678901234",
                             PhoneNumberConfirmed = false,
                             ProfilePicture = "https://example.com/profile5.jpg",
-                            SecurityStamp = "6d09f82a-3944-409a-8db5-040f12015e95",
+                            SecurityStamp = "46b64059-35f8-427a-93f6-1f60bd5ff484",
                             TwoFactorEnabled = false,
                             UserName = "landlord5@example.com"
                         });
@@ -692,19 +692,19 @@ namespace IRentNG.Repository.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "0c565282-7fac-4429-8cfe-0268259bb6c0",
+                            Id = "201f7411-6389-47e9-a8c7-d1aa12d23eca",
                             Name = "Administrator",
                             NormalizedName = "ADMINISTRATOR"
                         },
                         new
                         {
-                            Id = "00ab5334-1317-4aa1-9c9c-59d834f812da",
+                            Id = "c1ca115c-2ae9-4060-803f-118acc22ff6c",
                             Name = "Landlord",
                             NormalizedName = "LANDLORD"
                         },
                         new
                         {
-                            Id = "d0aeabaf-ebaf-4208-9fff-6e2d1c2f04f8",
+                            Id = "dd1107b9-28bc-4902-8c9e-2b47bbbc689b",
                             Name = "Tenant",
                             NormalizedName = "TENANT"
                         });

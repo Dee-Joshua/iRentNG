@@ -32,7 +32,7 @@ namespace IRentNG.Presentation.Controllers
 
 
         [HttpGet("/api/properties")]
-        //[Authorize]
+        [Authorize]
         public async Task<IActionResult> GetAllPropertiesListing([FromQuery] PropertyParameters propertyParameters)
         {
             var pagedResult = await _service.PropertyService.GetAllPropertiesInDatabaseAsync(propertyParameters, trackChanges: false);
@@ -102,7 +102,7 @@ namespace IRentNG.Presentation.Controllers
 
         [HttpPost("{id:guid}/property-photos")]
         [ServiceFilter(typeof(ValidationFilterAttribute))]
-        //[Authorize(Roles = "LandLord")]
+        [Authorize(Roles = "LandLord")]
         public async Task<IActionResult> UploadPropertyPhotos(Guid userId, Guid id, List<IFormFile> photos)
         {
             var propertyForPhotosUploads = await _service.PropertyService.UploadPropertyPhotosAsync(userId, id, photos, trackChanges: true);
@@ -111,7 +111,7 @@ namespace IRentNG.Presentation.Controllers
         }
 
         [HttpPost("{id:guid}/amenities")]
-        //[Authorize(Roles = "LandLord")]
+        [Authorize(Roles = "LandLord")]
         public async Task<IActionResult> AddPropertyAmenities(Guid userId, Guid id, [FromForm]List<PropertyAmenitiesDto> amenities)
         {
             

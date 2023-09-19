@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  irentng.api:
+    image: ${DOCKER_REGISTRY-}irentngapi
+    build:
+      context: .
+      dockerfile: IRentNg.WebApi\Dockerfile
